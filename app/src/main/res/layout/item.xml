@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/hikeItem">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_dark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_toStartOf="@+id/imgDelete"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            android:text="Delete">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_delete_24"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            >
+
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/itemImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/scene_1">
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:id="@+id/itemTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/itemImg"
+                    android:text="@string/app_name">
+                </TextView>
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/itemDate"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#808080"
+                        android:text="20/01/2001">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/itemLength"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="20km"
+                        android:layout_marginEnd="20dp"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

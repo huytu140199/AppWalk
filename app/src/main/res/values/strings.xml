@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">M-Hike</string>
+    <string name="level">Chọn mức độ</string>
+    <string name="required">Bắt buộc</string>
+</resources>
